@@ -4,16 +4,19 @@ public class BankManagmentSystem {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("1- Show Balance");
-        System.out.println("2- Deposite");
-        System.out.println("3- Withdraw");
-        System.out.println("4- Exit");
-        System.out.println("Enter your choice (1-4): ");
+
         double balance = 0;
 
         boolean isRunning = true;
 
         while (isRunning == true) {
+            System.out.println("-----------BANKING PROGRAMM------------");
+            System.out.println("1- Show Balance");
+            System.out.println("2- Deposite");
+            System.out.println("3- Withdraw");
+            System.out.println("4- Exit");
+            System.out.println("-----------------------------------------");
+            System.out.println("Enter your choice (1-4): ");
             int choice = in.nextInt();
 
             switch (choice) {
