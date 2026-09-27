@@ -9,7 +9,7 @@ class Student {
 
     Student(String name, int id, double gpa) {
         setName(name);
-        this.id = id;
+        setId(id);
         setGpa(gpa);
         feesPaid = 0;
         feesTotal = 30000;
@@ -23,6 +23,15 @@ class Student {
         } else {
 
             throw new IllegalArgumentException("Invalid name");
+        }
+    }
+
+    public void setId(int id){
+        if(id>0){
+            this.id=id;
+        }
+        else{
+            throw new IllegalArgumentException("Id must be a positive number");
         }
     }
 

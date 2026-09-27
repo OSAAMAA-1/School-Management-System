@@ -6,7 +6,7 @@ class Teacher {
 
     Teacher(String name, int id, double salary) {
         setName(name);
-        this.id = id;
+        setId(id);
         updateSalary(salary);
     }
 
@@ -15,10 +15,18 @@ class Teacher {
         if (name.length() >= 3 && name.matches("[a-zA-Z]+")) {
             this.name = name;
         } else {
-            
+
             throw new IllegalArgumentException("Invalid name");
         }
 
+    }
+
+    public void setId(int id) {
+        if (id > 0) {
+            this.id = id;
+        } else {
+            throw new IllegalArgumentException("Id must be a positive number");
+        }
     }
 
     public void updateSalary(double salary) {
