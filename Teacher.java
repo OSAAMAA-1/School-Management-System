@@ -5,9 +5,20 @@ class Teacher {
     private double salary;
 
     Teacher(String name, int id, double salary) {
-        this.name = name;
+        setName(name);
         this.id = id;
         updateSalary(salary);
+    }
+
+    public void setName(String name) {
+        name = name.trim();
+        if (name.length() >= 3 && name.matches("[a-zA-Z]+")) {
+            this.name = name;
+        } else {
+            
+            throw new IllegalArgumentException("Invalid name");
+        }
+
     }
 
     public void updateSalary(double salary) {
@@ -30,8 +41,9 @@ class Teacher {
     public double getSalary() {
         return salary;
     }
-    public String toString(){
-        return "Name: "+name+"   Id: "+id+"   Salary: "+salary;
+
+    public String toString() {
+        return "Name: " + name + "   Id: " + id + "   Salary: " + salary;
     }
 
 }
