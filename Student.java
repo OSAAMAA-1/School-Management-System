@@ -8,12 +8,22 @@ class Student {
     private double remainingFees;
 
     Student(String name, int id, double gpa) {
-        this.name = name;
+        setName(name);
         this.id = id;
         setGpa(gpa);
         feesPaid = 0;
         feesTotal = 30000;
 
+    }
+
+    public void setName(String name) {
+        name = name.trim();
+        if (name.length() >= 3 && name.matches("[a-zA-Z]+")) {
+            this.name = name;
+        } else {
+
+            throw new IllegalArgumentException("Invalid name");
+        }
     }
 
     public void setGpa(double gpa) {
@@ -25,42 +35,40 @@ class Student {
     }
 
     public void updateFeesPaid(double fees) {
-        if(fees>0){
-            feesPaid+=fees;
+        if (fees > 0) {
+            feesPaid += fees;
             School.updateTotalMoneyEarnd(feesPaid);
-        }
-        else{
+        } else {
             throw new IllegalArgumentException("Fees must be a positive number");
         }
     }
 
-    
     public String getName() {
         return name;
     }
-    
+
     public int getId() {
         return id;
     }
-    
+
     public double getGpa() {
         return gpa;
     }
-    
+
     public double getFeesPaid() {
         return feesPaid;
     }
-    
+
     public double getFeesTotal() {
         return feesTotal;
     }
-    
-    public double getRemainingFees(){
-        return feesTotal-feesPaid;
+
+    public double getRemainingFees() {
+        return feesTotal - feesPaid;
     }
-    
-    public String toString(){
-        return "Name: "+name+"   Id: "+id+"   Gpa: "+gpa;
+
+    public String toString() {
+        return "Name: " + name + "   Id: " + id + "   Gpa: " + gpa;
     }
 
 }
