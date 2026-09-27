@@ -7,7 +7,7 @@ class Teacher {
     Teacher(String name, int id, double salary) {
         this.name = name;
         this.id = id;
-        this.salary = salary;
+        updateSalary(salary);
     }
 
     public void updateSalary(double salary) {

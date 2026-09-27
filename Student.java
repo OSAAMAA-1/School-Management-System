@@ -10,7 +10,7 @@ class Student {
     Student(String name, int id, double gpa) {
         this.name = name;
         this.id = id;
-        this.gpa = gpa;
+        setGpa(gpa);
         feesPaid = 0;
         feesTotal = 30000;
 

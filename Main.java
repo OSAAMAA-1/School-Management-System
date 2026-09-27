@@ -9,7 +9,7 @@ public class Main {
         teachers.add(Ahmed);
         teachers.add(Ali);
         teachers.add(Ibrahim);
-        Student Mohammed=new Student("Mohammed", 07, 3.5);
+        Student Mohammed=new Student("Mohammed", 07, 3.9);
         Student Yossef=new Student("Yossef", 5, 3.0);
         Student Omar=new Student("Omar", 6, 3.4);
         ArrayList<Student>students=new ArrayList<>();
