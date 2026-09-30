@@ -10,7 +10,7 @@ class Course {
 
     Course(String title, int hours, Teacher teacherCourse, ArrayList<Student> studentsCourse, int maximumCapacity) {
         setTitle(title);
-        this.hours = hours;
+        setHours(hours);
         this.teacherCourse = teacherCourse;
         this.studentsCourse = studentsCourse;
         this.maximumCapacity = maximumCapacity;
@@ -27,7 +27,11 @@ class Course {
     }
 
     public void setHours(int hours) {
-        this.hours = hours;
+        if (hours > 0) {
+            this.hours = hours;
+        } else {
+            throw new IllegalArgumentException("Hours must be positive number");
+        }
     }
 
     public void addTeacherCourse(Teacher teacherCourse) {
