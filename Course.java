@@ -39,7 +39,12 @@ class Course {
     }
 
     public void addStudentCourse(Student student) {
-        studentsCourse.add(student);
+        if (studentsCourse.size() <= maximumCapacity) {
+
+            studentsCourse.add(student);
+        } else {
+            throw new IllegalArgumentException("Cannot enroll course is full");
+        }
     }
 
     public void setMaximumCapacity(int maximumCapacity) {
