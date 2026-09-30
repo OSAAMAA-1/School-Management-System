@@ -6,6 +6,7 @@ class Student {
     private double feesPaid;
     private double feesTotal;
     private double remainingFees;
+    private static int numOfStudent;
 
     Student(String name, int id, double gpa) {
         setName(name);
@@ -13,6 +14,7 @@ class Student {
         setGpa(gpa);
         feesPaid = 0;
         feesTotal = 30000;
+        numOfStudent+=1;
 
     }
 
@@ -79,5 +81,10 @@ class Student {
     public String toString() {
         return "Name: " + name + "   Id: " + id + "   Gpa: " + gpa;
     }
+
+    public  static int numOfStudent(){
+        return numOfStudent;
+    }
+
 
 }

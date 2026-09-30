@@ -14,12 +14,12 @@ public class Main {
 
         // Create student instances ---------------------
 
-        Student Mohammed = new Student("Mohammed", 07, 3.9);
+        Student Samy = new Student("Samy", 11, 2.7);
         Student Yossef = new Student("Yossef", 5, 3.0);
         Student Omar = new Student("Omar", 6, 3.4);
         ArrayList<Student> students = new ArrayList<>();
         students.add(Yossef);
-        students.add(Mohammed);
+        students.add(Samy);
         students.add(Omar);
 
         // Initialize the school------------------------------
@@ -27,8 +27,7 @@ public class Main {
         School FCI = new School(teachers, students);
 
         // Run test operations and print outputs
-        
-        Ali.setName("Ali00");
-        System.out.println(Ali.getName());
+        System.out.println(Teacher.numOfTeacher());
+
     }
 }

@@ -3,11 +3,13 @@ class Teacher {
     private String name;
     private int id;
     private double salary;
+    private static int numOfTeacher;
 
     Teacher(String name, int id, double salary) {
         setName(name);
         setId(id);
         updateSalary(salary);
+        numOfTeacher+=1;
     }
 
     public void setName(String name) {
@@ -52,6 +54,10 @@ class Teacher {
 
     public String toString() {
         return "Name: " + name + "   Id: " + id + "   Salary: " + salary;
+    }
+
+    public static int numOfTeacher(){
+        return numOfTeacher;
     }
 
 }
