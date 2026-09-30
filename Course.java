@@ -9,7 +9,7 @@ class Course {
     private int maximumCapacity;
 
     Course(String title, int hours, Teacher teacherCourse, ArrayList<Student> studentsCourse, int maximumCapacity) {
-        this.title = title;
+        setTitle(title);
         this.hours = hours;
         this.teacherCourse = teacherCourse;
         this.studentsCourse = studentsCourse;
@@ -18,7 +18,12 @@ class Course {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        title.trim();
+        if (title.matches("[a-zA-Z0-9 ]+")) {
+            this.title = title;
+        } else {
+            throw new IllegalArgumentException("Invalid title");
+        }
     }
 
     public void setHours(int hours) {
