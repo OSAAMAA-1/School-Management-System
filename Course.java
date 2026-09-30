@@ -13,7 +13,7 @@ class Course {
         setHours(hours);
         this.teacherCourse = teacherCourse;
         this.studentsCourse = studentsCourse;
-        this.maximumCapacity = maximumCapacity;
+        setMaximumCapacity(maximumCapacity);
 
     }
 
@@ -48,7 +48,12 @@ class Course {
     }
 
     public void setMaximumCapacity(int maximumCapacity) {
-        this.maximumCapacity = maximumCapacity;
+        if (maximumCapacity >= 0) {
+
+            this.maximumCapacity = maximumCapacity;
+        } else {
+            throw new IllegalArgumentException("Maximum capacity must be a positive number");
+        }
     }
 
     public String getTitle() {
