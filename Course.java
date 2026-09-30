@@ -4,15 +4,15 @@ class Course {
 
     private String title;
     private int hours;
-    private Teacher teacher;
-    private ArrayList<Student> students;
+    private Teacher teacherCourse;
+    private ArrayList<Student> studentsCourse;
     private int maximumCapacity;
 
-    Course(String title, int hours, Teacher teacher, ArrayList<Student> students, int maximumCapacity) {
+    Course(String title, int hours, Teacher teacherCourse, ArrayList<Student> studentsCourse, int maximumCapacity) {
         this.title = title;
         this.hours = hours;
-        this.teacher = teacher;
-        this.students = students;
+        this.teacherCourse = teacherCourse;
+        this.studentsCourse = studentsCourse;
         this.maximumCapacity = maximumCapacity;
 
     }
@@ -25,32 +25,35 @@ class Course {
         this.hours = hours;
     }
 
-    public void addTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public void addTeacherCourse(Teacher teacherCourse) {
+        this.teacherCourse = teacherCourse;
     }
 
-    public void addStudent(Student student) {
-        students.add(student);
+    public void addStudentCourse(Student student) {
+        studentsCourse.add(student);
     }
 
     public void setMaximumCapacity(int maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
-    public int getHours(){
-        return  hours;
-    }
-    public Teacher getTeacher(){
-        return teacher;
+
+    public int getHours() {
+        return hours;
     }
 
-    public ArrayList<Student> getStudents(){
-        return students;
+    public Teacher getTeacherCourse() {
+        return teacherCourse;
     }
-    public int getMaximumCapacity(){
+
+    public ArrayList<Student> getStudentsCourse() {
+        return studentsCourse;
+    }
+
+    public int getMaximumCapacity() {
         return maximumCapacity;
     }
 
