@@ -1,14 +1,16 @@
-import java.util.ArrayList;
+
+import java.util.Set;
+import java.util.HashSet;
 
 class Course {
 
     private String title;
     private int hours;
     private Teacher teacherCourse;
-    private ArrayList<Student> studentsCourse;
+    private Set<Student> studentsCourse;
     private int maximumCapacity;
 
-    Course(String title, int hours, Teacher teacherCourse, ArrayList<Student> studentsCourse, int maximumCapacity) {
+    Course(String title, int hours, Teacher teacherCourse, Set<Student> studentsCourse, int maximumCapacity) {
         setTitle(title);
         setHours(hours);
         this.teacherCourse = teacherCourse;
@@ -68,7 +70,7 @@ class Course {
         return teacherCourse;
     }
 
-    public ArrayList<Student> getStudentsCourse() {
+    public Set<Student> getStudentsCourse() {
         return studentsCourse;
     }
 
