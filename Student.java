@@ -13,8 +13,7 @@ class Student {
         setId(id);
         setGpa(gpa);
         feesPaid = 0;
-        feesTotal = 30000;
-        numOfStudent+=1;
+        numOfStudent += 1;
 
     }
 
@@ -28,11 +27,10 @@ class Student {
         }
     }
 
-    public void setId(int id){
-        if(id>0){
-            this.id=id;
-        }
-        else{
+    public void setId(int id) {
+        if (id > 0) {
+            this.id = id;
+        } else {
             throw new IllegalArgumentException("Id must be a positive number");
         }
     }
@@ -51,6 +49,15 @@ class Student {
             School.updateTotalMoneyEarnd(feesPaid);
         } else {
             throw new IllegalArgumentException("Fees must be a positive number");
+        }
+    }
+
+    public void setFeesTotal(double feesTotal) {
+        if (feesTotal >= 0) {
+
+            this.feesTotal = feesTotal;
+        } else {
+            throw new IllegalArgumentException("Total fees must be a positive number");
         }
     }
 
@@ -82,9 +89,8 @@ class Student {
         return "Name: " + name + "   Id: " + id + "   Gpa: " + gpa;
     }
 
-    public  static int numOfStudent(){
+    public static int numOfStudent() {
         return numOfStudent;
     }
-
 
 }
