@@ -45,6 +45,12 @@ class School {
         courses.add(course);
     }
 
+    public void displaySchoolInfo(){
+        System.out.println("Num of students = "+students.size());
+        System.out.println("Num of teachers = "+teachers.size());
+        System.out.println("Courses : "+getCoursesInfo());
+    }
+
     public ArrayList<Teacher> getTeachers() {
         return teachers;
     }
@@ -53,7 +59,7 @@ class School {
         return students;
     }
 
-    public ArrayList<Course> getCourses(){
+    public ArrayList<Course> getCoursesInfo(){
         return courses;
     }
 
@@ -64,6 +70,7 @@ class School {
     public double getTotlMoneySpent() {
         return totalMoneySpent;
     }
-    
+
+
 
 }
