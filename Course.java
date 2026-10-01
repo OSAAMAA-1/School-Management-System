@@ -36,11 +36,11 @@ class Course {
         }
     }
 
-    public void addTeacherCourse(Teacher teacherCourse) {
+    public void updateCourseTeacher(Teacher teacherCourse) {
         this.teacherCourse = teacherCourse;
     }
 
-    public void addStudentCourse(Student student) {
+    public void joinStudent(Student student) {
         if (studentsCourse.size() <= maximumCapacity) {
 
             studentsCourse.add(student);
@@ -56,6 +56,10 @@ class Course {
         } else {
             throw new IllegalArgumentException("Maximum capacity must be a positive number");
         }
+    }
+
+    public int availableSeats() {
+        return maximumCapacity - studentsCourse.size();
     }
 
     public String getTitle() {
