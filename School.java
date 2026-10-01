@@ -6,10 +6,12 @@ class School {
     private ArrayList<Student> students;
     private static double totalMoneyEarnd;
     private static double totalMoneySpent;
+    private ArrayList<Course> courses;
 
-    School(ArrayList<Teacher> teachers, ArrayList<Student> students) {
+    School(ArrayList<Teacher> teachers, ArrayList<Student> students, ArrayList<Course> courses) {
         this.teachers = teachers;
         this.students = students;
+        this.courses = courses;
         totalMoneyEarnd = 0;
         totalMoneySpent = 0;
     }
@@ -39,12 +41,20 @@ class School {
         students.add(student);
     }
 
+    public void addCourses(Course course) {
+        courses.add(course);
+    }
+
     public ArrayList<Teacher> getTeachers() {
         return teachers;
     }
 
     public ArrayList<Student> getStudents() {
         return students;
+    }
+
+    public ArrayList<Course> getCourses(){
+        return courses;
     }
 
     public double getTotalMoneyEarnd() {
@@ -54,5 +64,6 @@ class School {
     public double getTotlMoneySpent() {
         return totalMoneySpent;
     }
+    
 
 }
