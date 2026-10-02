@@ -45,10 +45,10 @@ class School {
         courses.add(course);
     }
 
-    public void displaySchoolInfo(){
-        System.out.println("Num of students = "+students.size());
-        System.out.println("Num of teachers = "+teachers.size());
-        System.out.println("Courses : "+getCoursesInfo());
+    public void displaySchoolInfo() {
+        System.out.println("Num of students = " + students.size());
+        System.out.println("Num of teachers = " + teachers.size());
+        System.out.println("Courses : " + getCoursesInfo());
     }
 
     public ArrayList<Teacher> getTeachers() {
@@ -59,7 +59,7 @@ class School {
         return students;
     }
 
-    public ArrayList<Course> getCoursesInfo(){
+    public ArrayList<Course> getCoursesInfo() {
         return courses;
     }
 
@@ -71,6 +71,15 @@ class School {
         return totalMoneySpent;
     }
 
+    public ArrayList<Course> getTeacherCourseWithId(int id) {
+        ArrayList<Course> coursesTeacher = new ArrayList<>();
+        for (Course course : courses) {
+            if (id == course.getTeacherCourse().getId()) {
+                coursesTeacher.add(course);
+            }
 
+        }
+        return coursesTeacher;
 
+    }
 }
